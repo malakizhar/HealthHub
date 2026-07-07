@@ -17,7 +17,10 @@ logger = logging.getLogger("healthhub.notifications")
 
 NTFY_BASE = os.getenv("NTFY_BASE", "https://ntfy.sh")
 VAPID_EMAIL = os.getenv("VAPID_EMAIL", "mailto:healthhub@local")
-KEYS_PATH = Path(__file__).parent / "vapid_keys.json"
+if os.getenv("VERCEL") or os.getenv("VERCEL_ENV"):
+    KEYS_PATH = Path("/tmp/vapid_keys.json")
+else:
+    KEYS_PATH = Path(__file__).parent / "vapid_keys.json"
 
 _scheduler_task: asyncio.Task | None = None
 
@@ -195,6 +198,9 @@ async def _scheduler_loop():
 
 
 def start_scheduler():
+    if os.getenv("VERCEL") or os.getenv("VERCEL_ENV"):
+        logger.info("Background scheduler disabled on Vercel — use /api/cron/reminders")
+        return
     global _scheduler_task
     if _scheduler_task is None or _scheduler_task.done():
         _scheduler_task = asyncio.create_task(_scheduler_loop())

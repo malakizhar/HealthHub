@@ -1,7 +1,9 @@
 """HealthHub AI backend: LLM + SQLite + live APIs."""
 
+import os
+
 from dotenv import load_dotenv
-from fastapi import FastAPI, File, Form, Header, HTTPException, Query, UploadFile
+from fastapi import FastAPI, File, Form, Header, HTTPException, Query, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -132,6 +134,20 @@ async def startup():
     seed_community()
     ensure_vapid_keys()
     start_scheduler()
+
+
+@app.get("/api/cron/reminders")
+async def cron_reminders(request: Request):
+    """Vercel Cron hits this every minute to send medication reminders."""
+    secret = os.getenv("CRON_SECRET", "")
+    if secret:
+        auth = request.headers.get("Authorization", "")
+        if auth != f"Bearer {secret}":
+            raise HTTPException(403, "Forbidden")
+    from notification_service import check_and_send_reminders
+
+    await check_and_send_reminders()
+    return {"ok": True}
 
 
 @app.get("/api/health")

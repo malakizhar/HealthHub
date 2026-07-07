@@ -13,7 +13,8 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
 POLLINATIONS_URL = os.getenv("POLLINATIONS_URL", "https://text.pollinations.ai/openai")
 POLLINATIONS_MODEL = os.getenv("POLLINATIONS_MODEL", "openai-fast")
-TIMEOUT = 90.0
+# Vercel Hobby caps serverless functions at 60s.
+TIMEOUT = float(os.getenv("LLM_TIMEOUT", "55" if os.getenv("VERCEL") else "90"))
 
 _active_provider: str | None = None
 

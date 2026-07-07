@@ -1,13 +1,18 @@
 """SQLite persistence for HealthHub AI."""
 
 import json
+import os
 import sqlite3
 from contextlib import contextmanager
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-DB_PATH = Path(__file__).parent / "healthhub.db"
+# Vercel serverless has ephemeral storage — use /tmp for SQLite.
+if os.getenv("VERCEL") or os.getenv("VERCEL_ENV"):
+    DB_PATH = Path("/tmp/healthhub.db")
+else:
+    DB_PATH = Path(__file__).parent / "healthhub.db"
 
 
 def _user_topic(user_id: str) -> str:

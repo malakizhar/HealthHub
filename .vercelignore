@@ -1,0 +1,7 @@
+backend/.venv
+backend/.venv-mac
+backend/__pycache__
+backend/*.db
+backend/package-lock.json
+frontend/node_modules
+.git
