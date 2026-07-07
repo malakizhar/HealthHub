@@ -1,0 +1,75 @@
+--- SLIDE ---
+AI Hackathon: Civic Innovation Challenge
+On behalf of our team and our Module Head, Ibrahim Naeem, we welcome you all to the AI Hackathon Module!
+We are thrilled to have 22 teams bringing their energy, creativity, and technical skills to the table today! Our mission? Turn civic complaints into powerful AI solutions that improve everyday life .
+
+--- SLIDE ---
+What on Earth is AI?
+AI is practical digital superpower : smart code that recognises patterns, automates tasks, and helps us solve complex civic problems faster. Think prediction, classification, automation and accessible interfaces not sci‑fi.
+
+--- SLIDE ---
+What Counts as a Civic Problem?
+Any daily issue that harms communities or public services. Examples:
+Poor traffic flow and road safety
+Poor waste collection and pollution
+Limited access to primary healthcare
+Unreliable electricity and load-shedding
+Education gaps and youth unemployment
+
+--- SLIDE ---
+Challenge Brief — Build for Pakistan
+Design an AI-powered solution targeting a real civic problem in Pakistan. The five inspiration tracks are starting points—feel free to combine or go beyond them.
+Traffic & Road Safety
+Predict congestion, detect violations, optimise routing, or improve pedestrian safety.
+Waste & Environment
+Optimise collection routes, detect illegal dumping, or map pollution hotspots.
+Education & Employment
+Skills matching, micro‑learning pathways, or job-placement nudges for youth.
+Healthcare Access
+Tele-triage, clinic mapping, appointment matching, or medical supply forecasting.
+Energy & Power
+Forecast load, suggest local scheduling, or detect outages faster.
+
+--- SLIDE ---
+Allowed Deliverables — Build Whatever Solves It
+Options include an AI model, website, mobile app, extension, dashboard, or any hybrid prototype. The only rule: original work—no copying or reskinning existing products.
+Aim for a minimal viable demo that clearly shows AI's role.
+
+--- SLIDE ---
+Ground Rules & Logistics
+3-Hour Window
+Setup, build, and final demo all within the sprint. Respect the clock.
+Team Presence
+All members must be physically present for the duration.
+Original Work
+No direct cloning. Reuse libraries and APIs, but produce new integrations and designs.
+AI Welcome
+Use models and tools, but document sources and ensure responsible usage.
+
+--- SLIDE ---
+Judging: How to Win (100 Points)
+Pitch must cover:
+Problem definition and impact
+How AI is used (models, data, UX)
+Working demo or clear prototype
+Score breakdown:
+Creativity & Uniqueness — 45
+Real impact for Pakistan — 35
+Working demo — 20.
+
+--- SLIDE ---
+Pitch Tips — Make the Demo Sing
+Start with a human story
+One clear example of who is helped and why it matters.
+Show AI, simply
+Explain model function in one sentence and show inputs → outputs.
+Demo core feature
+Even a partially working flow is better than many slides.
+Plan a 2‑minute closing
+Summarise impact, next steps, and what help you need to continue.
+
+--- SLIDE ---
+Ready. Set. Build.
+110‑minute build sprint starts now. Work hard, experiment boldly, and focus on measurable civic impact. See the judges at the demo line when your countdown ends.
+Final reminder: capture a 1‑minute demo video or 3‑slide walkthrough to accompany your live pitch.
+

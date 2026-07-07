@@ -1,0 +1,18 @@
+{
+  "name": "HealthHub AI",
+  "short_name": "HealthHub",
+  "description": "Healthcare platform for Pakistan — medicine reminders, triage, queue",
+  "start_url": "/app/medications",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
